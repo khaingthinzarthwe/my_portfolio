@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 
 const Test = () => {
-
   const variants = {
-    visible: {
+    visible: (i) => ({
       opacity: 1,
       x: 100,
-      transition: { staggerChildren: 0.5 },
-    },
+      transition: { delay: i * 0.3 },
+    }),
     hidden: { opacity: 0 },
   };
 
@@ -15,9 +14,11 @@ const Test = () => {
 
   return (
     <div className="course">
-      <motion.ul variants={variants} initial='hidden' animate='visible'>
-        {items.map((item) => (
-          <motion.li variants={variants} key={item}>{item}</motion.li>
+      <motion.ul variants={variants} initial="hidden" animate="visible">
+        {items.map((item, i) => (
+          <motion.li variants={variants} key={item} custom={i}>
+            {item}
+          </motion.li>
         ))}
       </motion.ul>
     </div>
