@@ -8,9 +8,14 @@ html{
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
 }
+:root{
+    --main-color: #E8B86D;
+    --background-color: #F1F3C2;
+    --text-color: black;
+}
 body{
-    background-color: #A1D6B2;
-    color: black;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 a{
     text-decoration: none;
