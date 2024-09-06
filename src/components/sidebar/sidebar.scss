@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #E8B86D;
+    background-color: #498428;
     color: black;
     
     .bg{
@@ -13,7 +13,7 @@
         left: 0;
         bottom: 0;
         width: 300px;
-        background: #E8B86D;
+        background: #498428;
         .links{
             position: absolute;
             width: 100%;
@@ -33,9 +33,8 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        text-align: center;
         position: fixed;
-        top: 25px;
+        top: 18px;
         left: 25px;
         background-color: transparent;
         border: none; 
