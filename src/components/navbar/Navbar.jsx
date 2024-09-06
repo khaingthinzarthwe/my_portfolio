@@ -1,6 +1,9 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { VscGithubAlt } from "react-icons/vsc";
+import { SlSocialInstagram } from "react-icons/sl";
 
 const Navbar = () => {
   return (
@@ -17,13 +20,13 @@ const Navbar = () => {
         </motion.span>
         <div className="social">
           <a href="#">
-            <img src="/linkedin.png" />
+            <SlSocialLinkedin size="2em" />
           </a>
           <a href="#">
-            <img src="/github.png" />
+            <VscGithubAlt size="2em" />
           </a>
           <a href="#">
-            <img src="/instagram.png" />
+            <SlSocialInstagram size="2em" />
           </a>
         </div>
       </div>
