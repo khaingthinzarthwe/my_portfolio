@@ -16,10 +16,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 40px;
+            gap: 20px;
             h2{
                 font-size: 30px;
-                color: #498428;
+                color: #68507B;
             }
             h1{
                 font-size: 70px;
@@ -35,16 +35,25 @@
                     font-weight: 300;
                 }
                 button:hover{
-                    background-color: #498428;
+                    background-color: #68507B;
                 }
             }
         }
     }
+    .slidingContainer{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -50px;
+        white-space: nowrap;
+        color: #68507b21;
+    }
     .imageContainer{
-        width: 60%;
         height: 100%;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 100px;
+        right: 100px;
+        img{
+            width: 300px;
+        }
     }
 }
