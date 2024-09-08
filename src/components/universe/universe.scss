@@ -8,20 +8,15 @@
     overflow: hidden;
     h1{
         font-size: 80px;
-    }
-    .mountains{
-        background-image: url("./mountains.png");
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: bottom;
+        color: #68507b;
         position: absolute;
-        z-index: 3;
+        margin-bottom: 200px;
     }
-    .planets{
-        background-image: url("./planets.png");
+    .flowers{
+        background-image: url("./pngwing.com.png");
         width: 100%;
         height: 100%;
+        opacity: 0.5;
         background-size: cover;
         background-position: bottom;
         position: absolute;
