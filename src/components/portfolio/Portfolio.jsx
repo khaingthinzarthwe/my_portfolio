@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import "./portfolio.scss";
+import { motion, useScroll, useSpring } from "framer-motion";
 
-const items = [
+const projects = [
   {
     id: 1,
     title: "Game Hub Version 1",
@@ -19,25 +21,35 @@ const items = [
     img: "https://images.pexels.com/photos/28197211/pexels-photo-28197211/free-photo-of-a-person-riding-a-horse-on-a-dirt-road.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellendus, inventore dolores asperiores distinctio nesciunt obcaecati deserunt dolorum voluptatum quasi molestiae nulla esse saepe voluptatibus fuga exercitationem. Exercitationem, dolor ad.",
   },
-  {
-    id: 4,
-    title: "React 18: Intermediate Topics",
-    img: "https://images.pexels.com/photos/27962064/pexels-photo-27962064/free-photo-of-a-person-standing-on-a-mountain-with-a-lake-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, repellendus, inventore dolores asperiores distinctio nesciunt obcaecati deserunt dolorum voluptatum quasi molestiae nulla esse saepe voluptatibus fuga exercitationem. Exercitationem, dolor ad.",
-  },
 ];
 
-const Single = ({item}) => {
-    return(
-        <section>{item.title}</section>
-    )
-}
+const Single = ({ p }) => {
+  return <section>{p.title}</section>;
+};
 const Portfolio = () => {
-  return <div className="portfolio">
-    {items.map(item => (
-        <Single key={item.id} item={item} />
-    ))}
-  </div>;
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  })
+
+  return (
+    <div className="portfolio" ref={ref}>
+      <div className="progress">
+        <h1>Featured Works</h1>
+        <motion.div style={{ scaleX: scaleX }} className="progressBar"></motion.div>
+      </div>
+      {projects.map((p) => (
+        <Single key={p.id} p={p} />
+      ))}
+    </div>
+  );
 };
 
 export default Portfolio;
