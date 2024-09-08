@@ -1,15 +1,32 @@
-import './universe.scss';
-import { motion } from 'framer-motion';
+import { useRef } from "react";
+import "./universe.scss";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Universe = () => {
-  return (
-    <div className='universe' style={{background: "linear-gradient(180deg, rgb(209, 209, 209), white)"}}>
-        <motion.h1>My Universe</motion.h1>
-        <motion.div className="mountains"></motion.div>
-        <motion.div className="planets"></motion.div>
-        <motion.div className="stars"></motion.div>
-    </div>
-  )
-}
+  const ref = useRef();
 
-export default Universe
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  return (
+    <div
+      className="universe"
+      ref={ref}
+      style={{
+        background: "linear-gradient(180deg, rgb(209, 209, 209), white)",
+      }}
+    >
+      <motion.h1 style={{ y: yText }}>My Universe</motion.h1>
+      <motion.div className="mountains"></motion.div>
+      {/* <motion.div style={{ y: yBg }} className="planets"></motion.div> */}
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+    </div>
+  );
+};
+
+export default Universe;
