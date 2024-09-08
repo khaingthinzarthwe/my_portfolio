@@ -68,7 +68,7 @@ const Orange = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+        日本語学習者 日本語学習者
       </motion.div>
       <div className="imageContainer">
         <img src="./lavender.png" />
