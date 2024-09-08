@@ -2,6 +2,7 @@ import "./app.scss";
 import Navbar from "./components/navbar/Navbar";
 import Orange from "./components/orange/Orange";
 import Universe from "./components/universe/Universe";
+import Portfolio from "./components/portfolio/Portfolio";
 
 const App = () => {
   return (
@@ -13,9 +14,7 @@ const App = () => {
       {/* <section id="Services"><Universe type='services' /></section>
       <section>Services</section> */}
       <section id="Portfolio"><Universe  /></section>
-      <section>Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
+      <Portfolio />
       <section id="Contact">Contact</section>
     </div>
   );
