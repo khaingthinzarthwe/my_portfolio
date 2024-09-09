@@ -3,6 +3,7 @@ import './contact.scss';
 const Contact = () => {
   return (
     <div className='contact'>
+        <div className="wrapper">
         <div className="textContainer">
             <h1>Let&apos;s Work Together</h1>
             <div className="item">
@@ -21,6 +22,7 @@ const Contact = () => {
                 <textarea rows={8} placeholder='Message' />
                 <button>Submit</button>
             </form>
+        </div>
         </div>
     </div>
   )
