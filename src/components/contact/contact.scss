@@ -26,6 +26,12 @@
     }
     .formContainer {
       flex: 1;
+      position: relative;
+
+      .mailboxSvg{
+        position: absolute;
+        margin: auto;
+      }
       form {
         display: flex;
         flex-direction: column;
