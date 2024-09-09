@@ -4,10 +4,12 @@ import Orange from "./components/orange/Orange";
 import Universe from "./components/universe/Universe";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
 
 const App = () => {
   return (
     <div>
+      <Cursor />
       <section id="Home">
         <Navbar />
         <Orange />
