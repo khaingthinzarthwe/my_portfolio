@@ -1,5 +1,5 @@
 import "./orange.scss";
-import { PiMouseScrollThin } from "react-icons/pi";
+import { RiScrollToBottomLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -58,7 +58,7 @@ const Orange = () => {
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
           <motion.div variants={textVariants} animate="scrollButton">
-            <PiMouseScrollThin size="3em" />
+            <RiScrollToBottomLine size="2em" />
           </motion.div>
         </motion.div>
       </div>
