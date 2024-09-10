@@ -39,7 +39,6 @@ const Single = ({ p }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
   return (
     <section>
@@ -50,7 +49,7 @@ const Single = ({ p }) => {
           </motion.div>
           <motion.div
             className="textContainer"
-            style={{ y: y, opacity: opacity }}
+            style={{ y: y }}
           >
             <h2>{p.title}</h2>
             <p>{p.desc}</p>

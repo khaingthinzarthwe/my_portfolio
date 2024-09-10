@@ -16,7 +16,7 @@ const App = () => {
         <Orange />
       </section>
       <section id="Projects"><Universe  /></section>
-      {/* <Portfolio /> */}
+      <Portfolio />
       {/* <section id="About"><About /></section> */}
       {/* <section id="Contact"><Contact /></section> */}
     </div>
