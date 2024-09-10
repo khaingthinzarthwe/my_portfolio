@@ -1,0 +1,31 @@
+.about {
+  background: linear-gradient(180deg, white, rgb(209, 209, 209));
+  height: 100%;
+
+  .me {
+    padding-top: 40px;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1{
+        color: #68507b;
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
+        text-align: center;
+    }
+  }
+  .expert{
+      max-width: 1000px;
+      margin: auto;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding-bottom: 50px;
+  }
+}
