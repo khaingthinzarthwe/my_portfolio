@@ -3,29 +3,51 @@
   height: 100%;
 
   .me {
-    padding-top: 40px;
+    padding: 100px;
     text-align: center;
     height: 200px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    h1{
-        color: #68507b;
-        font-size: 40px;
+    gap: 50px;
+    h1 {
+      color: #68507b;
+      font-size: 40px;
     }
-    p{
-        font-size: 20px;
-        text-align: center;
+    p {
+      font-size: 20px;
+      text-align: center;
     }
   }
-  .expert{
-      max-width: 1000px;
-      margin: auto;
-      margin-top: 20px;
+  .expert {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    .left {
+      flex: 1;
+      h2 {
+        padding-bottom: 5px;
+      }
+      .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h3 {
+          padding-bottom: 5px;
+        }
+      }
+    }
+    .right {
+      flex: 1;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 50px;
-      padding-bottom: 50px;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        padding-bottom: 5px;
+      }
+    }
   }
 }
