@@ -1,52 +1,67 @@
 import "./about.scss";
+import { motion } from "framer-motion";
 
+const textVariants = {
+    initial: {
+      y: 500,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+}
 const About = () => {
   return (
     <div className="about">
-      <div className="me">
-        <h1>About me!</h1>
-        <p>
+      <motion.div className="me" variants={textVariants} initial='initial' animate='animate'>
+        <motion.h1 variants={textVariants}>About me!</motion.h1>
+        <motion.p variants={textVariants}>
           I&apos;m a web development enthusiast specialized in React Js and
           proficient Japanese learner. I&apos;ve passed JLPT-N2 Exam and took
           part in Microsoft National Competition. I&apos;m an active learner and
           eager to solve challenges. Beyond my professional expertise, I&apos;m
           highly adaptable to changes and got many positive reviews from my
           colleagues and seniors.
-        </p>
-      </div>
-      <div className="expert">
-        <div className="left">
+        </motion.p>
+      </motion.div>
+      <motion.div className="expert" variants={textVariants} initial='initial' animate='animate'>
+        <motion.div className="left" variants={textVariants}>
           
-            <h2>Skills</h2>
-            <div className="skills">
-            <div className="languages">
-              <h3>Languages</h3>
-              <p>Burmese(Native or Billingual)</p>
-              <p>Japanese(JLPT-N2 passed)</p>
-            </div>
-            <div className="tech">
-              <h3>Tech Skills</h3>
-              <p>React Js, Typescript, SCSS, Tailwind, Framer Motion</p>
-              <p>Microsoft Word Specialis</p>
-            </div>
-          </div>
-          </div>
+            <motion.h2 variants={textVariants}>Skills</motion.h2>
+            <motion.div variants={textVariants} className="skills">
+            <motion.div variants={textVariants} className="languages">
+              <motion.h3 variants={textVariants}>Languages</motion.h3>
+              <motion.p variants={textVariants}>Burmese(Native or Billingual)</motion.p>
+              <motion.p variants={textVariants}>Japanese(JLPT-N2 passed)</motion.p>
+            </motion.div>
+            <motion.div variants={textVariants} className="tech">
+              <motion.h3 variants={textVariants}>Tech Skills</motion.h3>
+              <motion.p variants={textVariants}>React Js, Typescript, SCSS, Tailwind, Framer Motion</motion.p>
+              <motion.p variants={textVariants}>Microsoft Word Specialis</motion.p>
+            </motion.div>
+          </motion.div>
+          </motion.div>
           
-        <div className="right">
-          <div className="edu">
-            <h2>Education</h2>
-            <h3>University of Computer Studies, Mandalay</h3>
-            <span>2017-2020</span>
-            <u>Quitted due to COVID-19</u>
-          </div>
-          <div className="certify">
-            <h2>Certificates</h2>
-            <p>React 18: Intermediate Topics</p>
-            <p>Japanese Language Proficiency Test - N2</p>
-            <p>Microsoft Office Specialist Word 2013</p>
-          </div>
-        </div>
-      </div>
+        <motion.div className="right" variants={textVariants}>
+          <motion.div className="edu" variants={textVariants}>
+            <motion.h2 variants={textVariants}>Education</motion.h2>
+            <motion.h3 variants={textVariants}>University of Computer Studies, Mandalay</motion.h3>
+            <motion.span variants={textVariants}>2017-2020</motion.span>
+            <motion.u variants={textVariants}>Quitted due to COVID-19</motion.u>
+          </motion.div>
+          <motion.div variants={textVariants} className="certify">
+            <motion.h2 variants={textVariants}>Certificates</motion.h2>
+            <motion.p variants={textVariants}>React 18: Intermediate Topics</motion.p>
+            <motion.p variants={textVariants}>Japanese Language Proficiency Test - N2</motion.p>
+            <motion.p variants={textVariants}>Microsoft Office Specialist Word 2013</motion.p>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
