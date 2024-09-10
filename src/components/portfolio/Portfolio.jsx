@@ -7,19 +7,28 @@ const projects = [
     id: 1,
     title: "Game Hub Version 1",
     img: "./gamehubv1.png",
-    desc: "",
+    git: "https://github.com/khaingthinzarthwe/game-hub",
+    gitName: "game-hub",
+    desc: "A video game discovery app that helps you find new and interesting games to play. With GameHub, you can search for games by platform, genre, and more.",
+    demo: "https://game-hub-kappa-rose.vercel.app/",
   },
   {
     id: 2,
     title: "Game Hub Version 2",
     img: "./gamehubv2.png",
-    desc: "",
+    git: "https://github.com/khaingthinzarthwe/game-hub-v2",
+    gitName: "game-hub-v2",
+    desc: "Game Hub Version 2 enhances with more features such as game details, game trailers and screenshots using React Router.",
+    demo: "https://game-hub-v2-rose.vercel.app/",
   },
   {
     id: 3,
     title: "Evo Gym",
     img: "./evogym.png",
-    desc: "",
+    git: "https://github.com/khaingthinzarthwe/gym",
+    gitName: "gym",
+    desc: "Evo Gym is a fitness application using React, Typescript, Vite, Tailwind, Framer Motion, Hero Icons, Form Submit, React Anchor Link Smooth Scroll",
+    demo: "https://evogym-gray.vercel.app/",
   },
 ];
 
@@ -39,10 +48,16 @@ const Single = ({ p }) => {
           <motion.div className="imageContainer" ref={ref}>
             <img src={p.img} />
           </motion.div>
-          <motion.div className="textContainer" style={{ y: y, opacity: opacity }}>
+          <motion.div
+            className="textContainer"
+            style={{ y: y, opacity: opacity }}
+          >
             <h2>{p.title}</h2>
             <p>{p.desc}</p>
-            <button>See Demo</button>
+            <p>
+              Github Repo: <a href={p.git}>{p.gitName}</a>
+            </p>
+            <a href={p.demo}><button>See Demo</button></a>
           </motion.div>
         </motion.div>
       </div>
