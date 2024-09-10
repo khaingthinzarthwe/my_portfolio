@@ -42,7 +42,7 @@ const About = () => {
             <motion.div variants={textVariants} className="tech">
               <motion.h3 variants={textVariants}>Tech Skills</motion.h3>
               <motion.p variants={textVariants}>React Js, Typescript, SCSS, Tailwind, Framer Motion</motion.p>
-              <motion.p variants={textVariants}>Microsoft Word Specialis</motion.p>
+              <motion.p variants={textVariants}>Microsoft Word Specialist</motion.p>
             </motion.div>
           </motion.div>
           </motion.div>
