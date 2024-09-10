@@ -70,8 +70,8 @@
         flex-direction: column;
         gap: 30px;
         @include mobile {
-          transform: none !important;
-          padding: 10px;
+          // transform: none !important;
+          padding: 60px;
           align-items: center;
           text-align: center;
           gap: 10px;
