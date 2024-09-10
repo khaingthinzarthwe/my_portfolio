@@ -39,10 +39,10 @@
       .imageContainer{
         flex: 1;
         height: 50%;
-        .img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+        img {
+          width: 500px;
+          height: 300px;
+          object-fit: contain;
         }
       }
       .textContainer {
@@ -56,6 +56,7 @@
         }
         p{
           font-size: 15px;
+          font-weight: 500;
         }
         button{
           padding: 10px;
