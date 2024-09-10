@@ -17,7 +17,7 @@ const textVariants = {
 }
 const About = () => {
   return (
-    <div className="about">
+    <motion.div className="about" variants={textVariants}>
       <motion.div className="me" variants={textVariants} initial='initial' animate='animate'>
         <motion.h1 variants={textVariants}>About me!</motion.h1>
         <motion.p variants={textVariants}>
@@ -51,8 +51,8 @@ const About = () => {
           <motion.div className="edu" variants={textVariants}>
             <motion.h2 variants={textVariants}>Education</motion.h2>
             <motion.h3 variants={textVariants}>University of Computer Studies, Mandalay</motion.h3>
-            <motion.span variants={textVariants}>2017-2020</motion.span>
-            <motion.u variants={textVariants}>Quitted due to COVID-19</motion.u>
+            <motion.p variants={textVariants}>2017-2020</motion.p>
+            <motion.p variants={textVariants}>Quitted due to COVID-19</motion.p>
           </motion.div>
           <motion.div variants={textVariants} className="certify">
             <motion.h2 variants={textVariants}>Certificates</motion.h2>
@@ -62,7 +62,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

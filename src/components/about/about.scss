@@ -3,7 +3,10 @@
   height: 100%;
 
   .me {
-    padding: 100px;
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-left: 50px;
     text-align: center;
     height: 200px;
     display: flex;
@@ -21,7 +24,7 @@
   .expert {
     max-width: 1000px;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
