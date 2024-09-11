@@ -42,7 +42,16 @@ const sliderVariants = {
 const Orange = () => {
   return (
     <div className="orange">
+      <motion.div
+        className="slidingContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        日本語学習者 日本語学習者
+      </motion.div>
       <div className="wrapper">
+      
         <motion.div
           className="textContainer"
           variants={textVariants}
@@ -52,24 +61,17 @@ const Orange = () => {
           <motion.h2 variants={textVariants}>Khaing Thinzar Thwe</motion.h2>
           <motion.h1 variants={textVariants}>Web Developer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
+            <a href="#Projects"><motion.button variants={textVariants}>
               See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            </motion.button></a>
+            <a href="#Contact"><motion.button variants={textVariants}>Contact Me</motion.button></a>
           </motion.div>
           <motion.div variants={textVariants} animate="scrollButton">
-            <RiScrollToBottomLine size="2em" />
+            <a href="#Projects"><RiScrollToBottomLine size="2em" /></a>
           </motion.div>
         </motion.div>
       </div>
-      <motion.div
-        className="slidingContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        日本語学習者 日本語学習者
-      </motion.div>
+      
       <div className="imageContainer">
         <img src="./lavender.png" />
       </div>
