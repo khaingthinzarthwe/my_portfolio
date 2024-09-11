@@ -19,13 +19,13 @@ const Navbar = () => {
           Yoh Yoh
         </motion.span>
         <div className="social">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/khaing-thinzar-thwe/">
             <SlSocialLinkedin size="2em" />
           </a>
-          <a href="#">
+          <a href="https://github.com/khaingthinzarthwe">
             <VscGithubAlt size="2em" />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/im_yohyoh/">
             <SlSocialInstagram size="2em" />
           </a>
         </div>
