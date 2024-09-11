@@ -1,3 +1,5 @@
+@import '../../app.scss';
+
 .contact {
   background: linear-gradient(180deg, rgb(209, 209, 209), white);
   height: 100%;
@@ -9,29 +11,54 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    @include mobile{
+      width: 100%;
+      padding: 30px 10px 10px 10px;
+      flex-direction: column;
+      gap: 0;
+    }
 
     .textContainer {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 40px;
+      @include mobile{
+        align-items: center;
+        text-align: center;
+      }
       h1 {
         font-size: 70px;
         line-height: 70px;
         color: #68507b;
+        @include mobile{
+          font-size: 50px;
+          line-height: 50px;
+        }
       }
       span {
         font-weight: 400;
+        @include mobile{
+          font-weight: 300;
+        }
       }
     }
     .formContainer {
       flex: 1;
       position: relative;
+      @include mobile{
+        width: 100%;
+        padding: 0px 40px 40px 40px;
+        margin-top: 0;
+      }
 
       .mailboxSvg{
         position: absolute;
         margin: auto;
         z-index: -1;
+        @include mobile{
+          display: none;
+        }
       }
       form {
         display: flex;
@@ -43,6 +70,9 @@
           background-color: transparent;
           border: 1px solid black;
           border-radius: 5px;
+          @include mobile{
+            padding: 10px;
+          }
         }
         button {
           padding: 15px;
@@ -50,6 +80,9 @@
           background-color: #68507b;
           color: white;
           cursor: pointer;
+          @include mobile{
+            padding: 10px;
+          }
         }
       }
     }
