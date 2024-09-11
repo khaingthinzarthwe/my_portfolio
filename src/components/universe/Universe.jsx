@@ -21,7 +21,7 @@ const Universe = () => {
         background: "linear-gradient(180deg, rgb(209, 209, 209), white)",
       }}
     >
-      <motion.h1 style={{ y: yText }}>My Field</motion.h1>
+      <motion.h1 style={{ y: yText }}>Projects</motion.h1>
       <motion.div className="flowers"></motion.div>
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </div>
