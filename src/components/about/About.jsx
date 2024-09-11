@@ -16,6 +16,7 @@ const textVariants = {
     },
 }
 const About = () => {
+
   return (
     <motion.div className="about" variants={textVariants}>
       <motion.div className="me" variants={textVariants} initial='initial' animate='animate'>
