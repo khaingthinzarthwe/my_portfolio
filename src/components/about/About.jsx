@@ -37,7 +37,7 @@ const About = () => {
             <motion.div variants={textVariants} className="skills">
             <motion.div variants={textVariants} className="languages">
               <motion.h3 variants={textVariants}>Languages</motion.h3>
-              <motion.p variants={textVariants}>Burmese(Native or Billingual)</motion.p>
+              <motion.p variants={textVariants}>Burmese(Native or Bilingual)</motion.p>
               <motion.p variants={textVariants}>Japanese(JLPT-N2 passed)</motion.p>
             </motion.div>
             <motion.div variants={textVariants} className="tech">
